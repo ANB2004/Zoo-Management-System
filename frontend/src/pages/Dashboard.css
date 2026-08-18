@@ -1,0 +1,411 @@
+/* Dashboard Overview Layout matching Reference Screenshot 1 */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+/* Stat Card 1: Total Enclosures (Light Sand) */
+.stat-card-sand {
+  background: var(--bg-sand);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 155px;
+}
+
+.stat-card-sand__label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #526356;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card-sand__value {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  color: #111827;
+  line-height: 1;
+}
+
+.stat-card-sand__circle-bg {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+}
+
+/* Stat Card 2: Occupancy (Dark Green) */
+.stat-card-green {
+  background: var(--bg-green-card);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 155px;
+}
+
+.stat-card-green__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card-green__val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.stat-card-green__num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.stat-card-green__unit {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stat-card-green__progress {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.stat-card-green__bar {
+  height: 100%;
+  background: #34d399;
+  border-radius: var(--radius-full);
+}
+
+.stat-card-green__sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Stat Card 3: Daily Provisioning (Deep Green) */
+.stat-card-deep {
+  background: var(--bg-green-deep);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 155px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-deep__watermark {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 16px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Middle Layout Split */
+.overview-middle {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 1.75rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.section-head__title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: #111827;
+}
+
+.section-head__link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1c271f;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.section-head__link:hover {
+  text-decoration: underline;
+}
+
+/* Nutritional Distribution Panel (Fully Visible & Interactive) */
+.nutritional-box {
+  background: var(--bg-sand-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.nutritional-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nutritional-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.nutritional-ratio-bar-container {
+  display: flex;
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.nutritional-ratio-bar--herbivore {
+  background: #059669;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.nutritional-ratio-bar--carnivore {
+  background: #dc2626;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.nutritional-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.nutritional-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nutritional-dot--herbivore {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #059669;
+}
+
+.nutritional-dot--carnivore {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dc2626;
+}
+
+/* Ration Items Grid */
+.ration-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.ration-item-card {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.ration-item-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #111827;
+}
+
+.ration-item-cat {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.ration-item-qty {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #053b27;
+  line-height: 1;
+}
+
+/* Priority Action Cards */
+.priority-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Low Inventory Red Alert */
+.alert-card-red {
+  background: var(--bg-alert-red);
+  border-left: 5px solid #b91c1c;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.alert-card-red__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.alert-card-red__icon {
+  width: 24px;
+  height: 24px;
+  background: #fca5a5;
+  color: #b91c1c;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.alert-card-red__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b91c1c;
+}
+
+.alert-card-red__title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: #7f1d1d;
+  line-height: 1.1;
+}
+
+.alert-card-red__body {
+  font-size: 0.85rem;
+  color: #991b1b;
+  line-height: 1.4;
+}
+
+.alert-card-red__btn {
+  background: #b91c1c;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.alert-card-red__btn:hover {
+  background: #991b1b;
+}
+
+/* Next Scheduled Event Card */
+.next-event-card {
+  background: var(--bg-sand);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.next-event-card__time {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #042e1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next-event-card__time-sub {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: #718275;
+}
+
+.next-event-card__title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.next-event-card__sub {
+  font-size: 0.82rem;
+  color: #526356;
+}
+
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  .overview-middle {
+    grid-template-columns: 1fr;
+  }
+  .ration-items-grid {
+    grid-template-columns: 1fr;
+  }
+}

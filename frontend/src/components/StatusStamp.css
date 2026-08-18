@@ -1,0 +1,65 @@
+.status-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.status-stamp__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.status-stamp--occupied {
+  background: var(--accent-rose-bg);
+  color: var(--accent-rose-light);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.status-stamp--occupied .status-stamp__dot {
+  background: var(--accent-rose);
+  box-shadow: 0 0 8px var(--accent-rose);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.status-stamp--vacant {
+  background: var(--accent-emerald-bg);
+  color: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-stamp--vacant .status-stamp__dot {
+  background: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+/* Diet Tags */
+.diet-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.diet-tag--herbivore {
+  background: var(--accent-emerald-bg);
+  color: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.diet-tag--carnivore {
+  background: var(--accent-amber-bg);
+  color: var(--accent-amber-light);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}

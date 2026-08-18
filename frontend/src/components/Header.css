@@ -1,0 +1,93 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-header__logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.app-header__subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.app-header__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-header__status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.app-header__status-badge--active {
+  background: var(--badge-green-bg);
+  color: var(--badge-green-text);
+}
+
+.app-header__status-badge--guest {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.app-header__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.app-header__auth-btn {
+  background: var(--btn-brown);
+  color: #ffffff;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.app-header__auth-btn:hover {
+  background: #653b0a;
+}
+
+.app-header__user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #052e1e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

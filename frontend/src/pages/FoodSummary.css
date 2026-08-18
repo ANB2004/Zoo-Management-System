@@ -1,0 +1,124 @@
+.food-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.food-kpi-card {
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.food-kpi-card__label {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.food-kpi-card__value {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-main);
+  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.food-kpi-card__foot {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Ratio Bar */
+.ratio-panel {
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.ratio-bar-container {
+  height: 18px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  display: flex;
+  margin: 1rem 0;
+  border: 1px solid var(--border-subtle);
+}
+
+.ratio-bar--herbivore {
+  background: linear-gradient(90deg, #10b981, #34d399);
+  height: 100%;
+  transition: width var(--transition-normal);
+}
+
+.ratio-bar--carnivore {
+  background: linear-gradient(90deg, #f43f5e, #fb7185);
+  height: 100%;
+  transition: width var(--transition-normal);
+}
+
+.ratio-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+/* Food Breakdown Grid */
+.food-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.food-type-card {
+  padding: 1.25rem 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.food-type-card:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--border-glass);
+}
+
+.food-type-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.food-type-qty {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-emerald-light);
+}
+
+@media print {
+  .sidebar, .sidebar-toggle, .ui-page__eyebrow {
+    display: none !important;
+  }
+}

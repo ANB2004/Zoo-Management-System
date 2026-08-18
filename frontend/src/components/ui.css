@@ -1,0 +1,146 @@
+/* Shared, generic UI primitives used across pages.
+   Prefixed with "ui-" to avoid specificity collisions with page styles. */
+
+.ui-page {
+  padding: 36px 44px;
+  max-width: 1100px;
+}
+
+.ui-page__header {
+  margin-bottom: 28px;
+}
+
+.ui-page__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.ui-page__title {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.ui-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.ui-btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.ui-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.ui-btn:active {
+  transform: translateY(1px);
+}
+
+.ui-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-text);
+  font-weight: 600;
+}
+
+.ui-btn--primary:hover {
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong);
+}
+
+.ui-btn--danger {
+  background: transparent;
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.ui-btn--danger:hover {
+  background: var(--color-danger-bg);
+}
+
+.ui-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ui-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.ui-field__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.ui-field__input,
+.ui-field__select {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 9px 11px;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.ui-field__input:focus,
+.ui-field__select:focus {
+  border-color: var(--color-accent);
+}
+
+.ui-field__hint {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.ui-banner {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  margin-bottom: 18px;
+  border: 1px solid transparent;
+}
+
+.ui-banner--error {
+  background: var(--color-danger-bg);
+  border-color: var(--color-danger);
+  color: #f0b6a8;
+}
+
+.ui-banner--success {
+  background: rgba(134, 176, 106, 0.14);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.ui-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-text-faint);
+  font-size: 13px;
+}
+
+.ui-loading {
+  color: var(--color-text-faint);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}

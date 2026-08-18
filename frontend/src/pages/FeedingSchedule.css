@@ -1,0 +1,227 @@
+/* Feeding Management Layout matching Reference Screenshot 3 */
+
+.feeding-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Schedule / Summary Tab Switch */
+.tab-pill-switch {
+  display: inline-flex;
+  background: var(--bg-sand);
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  gap: 0.25rem;
+}
+
+.tab-pill-btn {
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #526356;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.tab-pill-btn--active {
+  background: var(--bg-green-card);
+  color: #ffffff;
+}
+
+/* Diet Filter Container */
+.diet-filter-box {
+  background: var(--bg-sand);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+.diet-filter-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #526356;
+  text-transform: uppercase;
+}
+
+.diet-filter-btn {
+  background: #ffffff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.diet-filter-btn--active {
+  background: var(--bg-green-card);
+  color: #ffffff;
+}
+
+/* Timeline Layout */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline-stem-line {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 2px;
+  background: #cbd5e1;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.3rem;
+  top: 1.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #475569;
+  border: 2px solid #ffffff;
+  z-index: 2;
+}
+
+.timeline-dot--herbivore {
+  background: #059669;
+}
+
+.timeline-dot--carnivore {
+  background: #dc2626;
+}
+
+.timeline-time-label {
+  position: absolute;
+  left: -4rem;
+  top: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Timeline Item Card */
+.timeline-card {
+  background: var(--bg-sand-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.timeline-card__stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.timeline-card__stripe--herbivore {
+  background: #059669;
+}
+
+.timeline-card__stripe--carnivore {
+  background: #dc2626;
+}
+
+.timeline-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.timeline-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.timeline-location-tag {
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.timeline-card__ration-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #718275;
+  margin-top: 0.3rem;
+}
+
+.timeline-card__ration-text {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Right Side Quantity */
+.timeline-card__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.timeline-quantity-box {
+  text-align: right;
+}
+
+.timeline-quantity-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #718275;
+}
+
+.timeline-quantity-val {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  color: #111827;
+  line-height: 1.1;
+}

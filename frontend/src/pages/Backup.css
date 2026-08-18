@@ -1,0 +1,213 @@
+/* Secure Portal Layout matching Reference Screenshot 5 */
+
+.portal-breadcrumb {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.portal-top-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.db-online-badge {
+  background: var(--bg-sand);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1c271f;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+}
+
+/* Left Login Card */
+.portal-login-card {
+  background: var(--bg-sand);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.portal-login-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.portal-login-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-green-card);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-login-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.portal-login-sub {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.portal-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.portal-input-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.portal-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.portal-input-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.portal-field {
+  width: 100%;
+  padding: 0.75rem 0.85rem 0.75rem 2.6rem;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #111827;
+  outline: none;
+}
+
+.portal-field:focus {
+  border-color: var(--bg-green-card);
+  box-shadow: 0 0 0 3px rgba(4, 46, 31, 0.1);
+}
+
+.portal-btn-auth {
+  background: var(--bg-green-card);
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: background 0.15s ease;
+}
+
+.portal-btn-auth:hover {
+  background: #021f14;
+}
+
+/* System Integrity Card */
+.integrity-banner {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  height: 140px;
+  background: url('https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80') center/cover;
+}
+
+.integrity-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+.integrity-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.integrity-sub {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Right Side Operations Panel */
+.archival-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.archival-lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(251, 248, 239, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.archival-lock-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+}

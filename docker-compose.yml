@@ -1,0 +1,25 @@
+version: "3.8"
+
+# Optional: run this if you'd rather develop against real Postgres than
+# the default SQLite. Not required for local dev or for deployment (Neon
+# is used in production instead — see README).
+#
+# Usage:
+#   docker compose up -d
+#   set DATABASE_URL=postgres://zoo:zoo@localhost:5432/zoodb in backend/.env
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: zoo
+      POSTGRES_PASSWORD: zoo
+      POSTGRES_DB: zoodb
+    ports:
+      - "5432:5432"
+    volumes:
+      - zoo_pgdata:/var/lib/postgresql/data
+
+volumes:
+  zoo_pgdata:

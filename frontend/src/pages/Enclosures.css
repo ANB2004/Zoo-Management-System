@@ -1,0 +1,307 @@
+/* Enclosures Overview Layout matching Reference Screenshot 2 */
+
+.enclosures-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.enclosures-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-pill-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-sand);
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-full);
+  width: 240px;
+}
+
+.search-pill-input input {
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  outline: none;
+  width: 100%;
+}
+
+.filter-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-sand);
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111827;
+  cursor: pointer;
+}
+
+/* Enclosure Cards Grid */
+.habitat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.habitat-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habitat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Cover Photo */
+.habitat-card__cover {
+  height: 165px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.habitat-card__cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.habitat-card__cover-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.habitat-card__cover-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.habitat-card__badge-occupied {
+  background: var(--badge-green-bg);
+  color: var(--badge-green-text);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.habitat-card__badge-vacant {
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.habitat-card__sector {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.habitat-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Body Content */
+.habitat-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1.25rem;
+}
+
+/* Occupied Layout */
+.habitat-occupant-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.habitat-animal-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #e2e8f0;
+}
+
+.habitat-animal-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.habitat-animal-species {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.habitat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tag-badge--carnivore {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.tag-badge--herbivore {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.tag-badge--tan {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Vacant Layout */
+.habitat-vacant-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.habitat-vacant-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #854d0e;
+  margin-bottom: 0.25rem;
+}
+
+.habitat-vacant-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #111827;
+}
+
+.habitat-vacant-sub {
+  font-size: 0.82rem;
+  color: #64748b;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+/* Card Buttons */
+.btn-remove-occupant {
+  background: var(--btn-red);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  transition: background 0.15s ease;
+}
+
+.btn-remove-occupant:hover {
+  background: #991b1b;
+}
+
+.btn-add-occupant {
+  background: var(--btn-brown);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  transition: background 0.15s ease;
+}
+
+.btn-add-occupant:hover {
+  background: #653b0a;
+}

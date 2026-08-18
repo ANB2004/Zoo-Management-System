@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* WildReserve Palette */
+  --bg-app: #fbf8ef;
+  --bg-sidebar: #052e1e;
+  --bg-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --bg-sidebar-active: #0c432d;
+  
+  --bg-sand: #f3ebd8;
+  --bg-sand-light: #f9f5e8;
+  --bg-green-card: #042e1f;
+  --bg-green-deep: #053b27;
+  
+  --bg-alert-red: #fef2f2;
+  --border-alert-red: #f87171;
+  --text-alert-red: #991b1b;
+  --btn-red: #b91c1c;
+
+  --btn-brown: #854d0e;
+  --btn-green: #053b27;
+
+  /* Badges */
+  --badge-green-bg: #dcfce7;
+  --badge-green-text: #166534;
+  
+  --badge-vacant-bg: #e2e8f0;
+  --badge-vacant-text: #475569;
+
+  --badge-herbivore-bg: #d1fae5;
+  --badge-herbivore-text: #065f46;
+
+  --badge-carnivore-bg: #fee2e2;
+  --badge-carnivore-text: #991b1b;
+
+  --badge-tan-bg: #fef3c7;
+  --badge-tan-text: #92400e;
+
+  /* Typography */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Text Colors */
+  --text-primary: #1c271f;
+  --text-secondary: #526356;
+  --text-muted: #718275;
+  --text-light: #fbf8ef;
+
+  /* Radius & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography elements */
+h1, h2, h3, .serif-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(5, 46, 30, 0.3);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-sidebar);
+}
+
+/* Common Layout Containers */
+.ui-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.ui-page__title {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: #111827;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.ui-page__subtitle {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
