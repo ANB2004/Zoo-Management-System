@@ -7,7 +7,6 @@ import {
   IconScale,
   IconDownload,
   IconShield,
-  IconElephant,
   IconMenu,
   IconX,
 } from "./Icons";
