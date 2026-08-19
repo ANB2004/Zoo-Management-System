@@ -80,10 +80,6 @@ export function Login() {
             </div>
           </div>
 
-          <div style={{ background: "#ffffff", padding: "0.6rem 0.85rem", borderRadius: "var(--radius-sm)", fontSize: "0.78rem", color: "#526356" }}>
-            🔑 Seeded Admin: <span className="mono" style={{ fontWeight: 700 }}>admin</span> / <span className="mono" style={{ fontWeight: 700 }}>ChangeMe123!</span>
-          </div>
-
           <button type="submit" className="portal-btn-auth" disabled={loading}>
             <span>{loading ? "AUTHENTICATING..." : "AUTHENTICATE"}</span>
             <span>→</span>
